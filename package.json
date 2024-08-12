@@ -3,14 +3,16 @@
     "version": "0.1.0",
     "private": true,
     "devDependencies": {
-        "@wdio/appium-service": "^8.0.9",
-        "@wdio/cli": "^7.16.4",
-        "@wdio/local-runner": "^7.16.4",
+        "@wdio/appium-service": "^8.3.5",
+        "@wdio/cli": "^8.3.5",
+        "@wdio/local-runner": "^8.3.5",
         "@wdio/mocha-framework": "^8.3.0",
         "@wdio/spec-reporter": "^8.3.0",
         "appium": "^2.10.3",
         "appium-uiautomator2-driver": "^3.7.6",
-        "appium-xcuitest-driver": "^7.24.15"
+        "appium-xcuitest-driver": "^7.24.15",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.5.4"
     },
     "scripts": {
         "wdioAndroid": "wdio run config/android-wdio.conf.js",
