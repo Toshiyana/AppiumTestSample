@@ -1,7 +1,9 @@
 class CatalogScreen {
   get productsHeader() {
     return $(
-      '//XCUIElementTypeStaticText[@name="Products"]'
+      // NOTE: xpath指定だと何故か参照できずにエラーになる
+      // '//XCUIElementTypeStaticText[@name="Products"]'
+      '-ios class chain:**/XCUIElementTypeStaticText[`name == "Products"`]'
     );
   }
 }

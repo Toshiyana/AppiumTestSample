@@ -1,3 +1,4 @@
+// 要素指定をハードコーディングした場合（コードを非常に読みづらい）
 describe("My Login Demo", () => {
   beforeEach(async () => {
     //Accesibility selector
@@ -35,12 +36,18 @@ describe("My Login Demo", () => {
 
     await $('//*[@name="Login button"]').click()
 
+    // NOTE: xpath指定だと何故か参照できずにエラーになる
     // console.log(await $('//XCUIElementTypeStaticText[@name="Products"]').getText())
+    // await expect(
+    //   $(
+    //     '//XCUIElementTypeStaticText[@name="Products"]'
+    //   )
+    // ).toHaveText("Products");
+
     await expect(
       $(
-        '//XCUIElementTypeStaticText[@name="Products"]'
+        '-ios class chain:**/XCUIElementTypeStaticText[`name == "Products"`]'
       )
     ).toHaveText("Products");
-
   });
 });

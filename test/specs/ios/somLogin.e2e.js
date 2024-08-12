@@ -1,3 +1,4 @@
+// スクリーンオブジェクトで画面と要素をまとめた場合（コードを読みやすい）
 const CatalogScreen = require("../../screenObjects/ios/Catalog.screen");
 const LoginScreen = require("../../screenObjects/ios/Login.screen");
 const LeftSideMenuScreen = require("../../screenObjects/ios/BottomSideMenu.screen")
